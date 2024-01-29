@@ -1,0 +1,188 @@
+.react-slideshow-container .default-nav{
+    height: 40px;
+    width: 40px;
+
+}
+.react-slideshow-container .default-nav:hover{
+    background-color: #7844b4;
+}
+svg:hover{
+    color: white;
+}
+.nav{
+    min-height: auto;
+}
+@media(max-width:620px){
+    .dodo{
+        width: auto !important;
+    }
+    
+}
+.down{
+    animation-name: top-to-button;
+    animation-duration: 1s;
+}
+.up{
+    animation-name: button-to-top;
+    animation-duration: 1s;
+
+}
+@keyframes button-to-top {
+    from{
+      transform: translateY(100px);
+    }
+    to{
+      transform: translateY(0);
+    }
+
+    
+  }
+  @keyframes top-to-button {
+    from{
+      transform: translateY(-100px);
+    }
+    to{
+      transform: translateY(0);
+    }
+    
+  }
+.kalam{
+    /* z-index:5 ; */
+    position: absolute;
+    flex-wrap: wrap;
+}
+.sowar{
+    /*! m4 bayt7ato */
+    z-index: -2;   
+    
+    /* position: relative; */
+    /* display:"flex";
+    margin-top:"0px";
+    flex-direction:"column";
+    justify-content:"center";
+    align-items:"center";
+    height:"100vh";
+    background-size:"cover"; */
+
+}
+.desc{
+    /* ! */
+    z-index: 5 !important;
+}
+.layer{
+    min-height: 100vh;
+    width: 100%;
+    background-color: black;
+    opacity: 0.6;
+    z-index: 3;
+    position: absolute;
+}
+.slide-container{
+    position: relative;
+    margin-top: 0;
+    bottom: 0;
+}
+.but{
+    --color: #560bad;
+    font-family: inherit;
+    display: inline-block;
+    width: 8em;
+    height: 2.6em;
+    line-height: 2.5em;
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid var(--color);
+    transition: color .5s;
+    z-index: 1;
+    font-size: 17px;
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--color);
+   }
+   
+   .but:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background: var(--color);
+    height: 150px;
+    width: 200px;
+    border-radius: 50%;
+   }
+   
+   .but:hover {
+    color: #fff;
+   }
+   
+   .but:before {
+    top: 100%;
+    left: 100%;
+    transition: all .7s;
+   }
+   
+   .but:hover:before {
+    top: -30px;
+    left: -30px;
+   }
+   
+   .but:active:before {
+    background: #3a0ca3;
+    transition: background 0s;
+   }
+   .op{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    opacity: 0.3;
+   }
+
+   .Btnn {
+    width: 130px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(15, 15, 15);
+    border: none;
+    color: white;
+    font-weight: 600;
+    gap: 8px;
+    cursor: pointer;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103);
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+  }
+  
+  .svgIcon {
+    width: 16px;
+  }
+  
+  .svgIcon path {
+    fill: white;
+  }
+  
+  .Btnn::before {
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    content: "";
+    background-color: white;
+    border-radius: 50%;
+    left: -100%;
+    top: 0;
+    transition-duration: .3s;
+    mix-blend-mode: difference;
+  }
+  
+  .Btnn:hover::before {
+    transition-duration: .3s;
+    transform: translate(100%,-50%);
+    border-radius: 0;
+  }
+  
+  .Btnn:active {
+    transform: translate(5px,5px);
+    transition-duration: .3s;
+  }
